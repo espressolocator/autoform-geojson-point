@@ -11,7 +11,7 @@ Package.onUse(function(api) {
 
   var packages = [
     'aldeed:autoform',
-    'aldeed:simple-schema',
+    'kabalin:simple-schema-geojson'
   ];
   api.use(packages);
   api.use(['templating'], 'client');
@@ -22,9 +22,6 @@ Package.onUse(function(api) {
     'lib/client/autoform-geojson-point.js',
     'lib/client/autoform-geojson-point.html',
   ], 'client');
-  api.addFiles(['lib/twodsphere-schema.js'], ['client', 'server']);
-
-  api.export(['twodsphereSchema']);
 });
 
 Package.onTest(function(api) {
