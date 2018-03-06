@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'kabalin:autoform-geojson-point',
+  name: 'espressolocator:autoform-geojson-point',
   version: '0.0.1',
-  summary: 'Store GeoJSON Point coodinates.',
-  git: '',
+  summary: 'Store GeoJSON Point coodinates with autoForm.',
+  git: 'https://github.com/espressolocator/autoform-geojson-point',
   documentation: 'README.md'
 });
 
@@ -10,8 +10,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2');
 
   var packages = [
-    'aldeed:autoform',
-    'kabalin:simple-schema-geojson'
+    'aldeed:autoform@5.8.0',
+    'espressolocator:simple-schema-geojson'
   ];
   api.use(packages);
   api.use(['templating'], 'client');
@@ -27,6 +27,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('kabalin:autoform-geojson-point');
+  api.use('espressolocator:autoform-geojson-point');
   api.addFiles('autoform-geojson-point-tests.js');
 });
